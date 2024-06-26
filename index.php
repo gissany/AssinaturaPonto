@@ -95,16 +95,16 @@
                     $data = date('d/m/Y');
                     $horario = date('H:i:s');
 
-                    // Cria um array para armazenar os registros temporariamente
+                    
                     $registros = [];
 
-                    // Verifica se já existem registros salvos na sessão
+                    
                     session_start();
                     if (isset($_SESSION['registros'])) {
                         $registros = $_SESSION['registros'];
                     }
 
-                    // Adiciona o novo registro ao array
+                    
                     $registros[] = [
                         'nome' => $nome,
                         'matricula' => $matricula,
@@ -112,7 +112,7 @@
                         'horario' => $horario
                     ];
 
-                    // Salva os registros atualizados na sessão
+                    
                     $_SESSION['registros'] = $registros;
                 }
 
